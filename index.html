@@ -33,40 +33,41 @@
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
             border: 1px solid rgba(255, 255, 255, 0.06);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* ---------- HIỆU ỨNG CHỮ 3D CẦU VỒNG CHẠY ---------- */
-        .rainbow-3d {
-            text-align: center;
-            font-size: 4.2rem;
+        /* ---------- LOGO & TIÊU ĐỀ MỚI (Lấy theo ảnh) ---------- */
+        .header-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .header-logo svg {
+            display: block;
+            width: 140px;
+            height: 140px;
+            margin-bottom: 5px;
+            filter: drop-shadow(0 0 15px rgba(50, 132, 250, 0.4));
+        }
+
+        .header-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2.8rem;
             font-weight: 900;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 8px;
-            /* Lớp bóng 3D dày và rõ hơn */
-            text-shadow:
-                0 1px 0 #ccc,
-                0 2px 0 #b9b9b9,
-                0 3px 0 #a6a6a6,
-                0 4px 0 #939393,
-                0 5px 0 #808080,
-                0 6px 0 #6d6d6d,
-                0 7px 0 #5a5a5a,
-                0 8px 0 #474747,
-                0 9px 0 #343434,
-                0 10px 0 #212121,
-                0 12px 12px rgba(0, 0, 0, 0.7);
-            background: linear-gradient(90deg,
-                    #ff0000, #ff7700, #ffff00, #00ff00, #0000ff, #8b00ff, #ff0000);
+            letter-spacing: 0.1em;
+            background: linear-gradient(90deg, #f336d8, #ff6c36, #f9e547, #62f75c);
             background-size: 300% 100%;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             animation: rainbowMove 4s linear infinite;
-            transform: perspective(800px) rotateX(8deg) rotateY(-4deg);
-            display: inline-block;
-            width: 100%;
-            padding: 0 10px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transform: perspective(600px) rotateX(2deg);
         }
 
         @keyframes rainbowMove {
@@ -74,6 +75,7 @@
             100% { background-position: 300% 50%; }
         }
 
+        /* ---------- CÁC THÀNH PHẦN CÒN LẠI (Giữ nguyên của bạn) ---------- */
         .sub-title {
             text-align: center;
             color: rgba(255, 255, 255, 0.5);
@@ -85,6 +87,7 @@
             margin-bottom: 28px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             padding-bottom: 18px;
+            width: 100%;
         }
 
         .desc {
@@ -102,7 +105,8 @@
 
         .install-btn-wrapper {
             text-align: center;
-            margin: 30px 0 24px;
+            margin: 0px 0 24px;
+            width: 100%;
         }
 
         .install-btn {
@@ -137,6 +141,7 @@
             border-radius: 28px;
             padding: 22px 20px 18px;
             border: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100%;
         }
 
         .notes-title {
@@ -182,24 +187,21 @@
             font-size: 0.75rem;
             color: rgba(255, 255, 255, 0.25);
             letter-spacing: 1px;
+            width: 100%;
         }
 
+        /* ---------- RESPONSIVE ---------- */
         @media (max-width: 500px) {
             .container {
                 padding: 28px 18px;
                 border-radius: 32px;
             }
-            .rainbow-3d {
-                font-size: 2.8rem;
-                text-shadow:
-                    0 1px 0 #ccc,
-                    0 2px 0 #b9b9b9,
-                    0 3px 0 #a6a6a6,
-                    0 4px 0 #939393,
-                    0 5px 0 #808080,
-                    0 6px 0 #6d6d6d,
-                    0 7px 0 #5a5a5a,
-                    0 8px 4px rgba(0, 0, 0, 0.6);
+            .header-logo svg {
+                width: 100px;
+                height: 100px;
+            }
+            .header-title {
+                font-size: 2rem;
             }
             .install-btn {
                 padding: 16px 32px;
@@ -215,8 +217,8 @@
         }
 
         @media (max-width: 380px) {
-            .rainbow-3d {
-                font-size: 2.2rem;
+            .header-title {
+                font-size: 1.6rem;
             }
         }
     </style>
@@ -225,8 +227,54 @@
 
     <div class="container">
 
-        <!-- TIÊU ĐỀ CHÍNH - 3D CẦU VỒNG CHẠY -->
-        <h1 class="rainbow-3d">Plat • Dex</h1>
+        <!-- LOGO & TIÊU ĐỀ MỚI -->
+        <div class="header-logo">
+            <!-- Logo con dơi - Tạo lại y hệt ảnh của bạn -->
+            <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Viền ngoài tấm khiên và bóng mờ -->
+                <defs>
+                    <filter id="glowLogo" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur stdDeviation="6" result="blur" />
+                        <feMerge>
+                            <feMergeNode in="blur" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+                
+                <!-- Tấm khiên vàng cam -->
+                <polygon points="200,120 280,150 300,260 200,320 100,260 120,150" fill="none" stroke="#fca530" stroke-width="8" filter="url(#glowLogo)"/>
+                <!-- Nền tấm khiên -->
+                <polygon points="200,135 270,162 285,255 200,310 115,255 130,162" fill="#0f1b30" />
+                
+                <!-- Con dơi màu xanh dương -->
+                <g fill="#3284fa">
+                    <!-- Cánh trái -->
+                    <path d="M 170,200 Q 120,140 85,170 Q 60,200 120,220 Q 140,230 110,250 Q 150,240 180,240 Z" />
+                    <!-- Cánh phải -->
+                    <path d="M 230,200 Q 280,140 315,170 Q 340,200 280,220 Q 260,230 290,250 Q 250,240 220,240 Z" />
+                    <!-- Đầu -->
+                    <polygon points="200,160 175,195 225,195" />
+                    <!-- Ngực trên -->
+                    <path d="M 185,195 L 215,195 L 215,240 L 185,240 Z" />
+                    <!-- Bụng dưới -->
+                    <path d="M 180,240 L 220,240 L 205,290 L 195,290 Z" />
+                </g>
+                
+                <!-- Chi tiết mắt vàng cam -->
+                <g fill="#f9e547">
+                    <polygon points="190,184 194,190 186,192" />
+                    <polygon points="210,184 206,190 214,192" />
+                </g>
+                <!-- Mũi và ngực cyan -->
+                <path d="M 195,240 L 205,240 L 201,265 L 199,265 Z" fill="#6bc9ff" />
+                <path d="M 194,290 L 206,290 L 200,305 Z" fill="#6bc9ff" />
+                <!-- Cặp cánh phụ -->
+                <path d="M 170,285 L 140,295 L 145,310 Z M 230,285 L 260,295 L 255,310 Z" fill="#3284fa" />
+            </svg>
+            <h1 class="header-title">Plat • Dex</h1>
+        </div>
+
         <div class="sub-title">DNS Chặn Thu Hồi Chứng Chỉ</div>
 
         <p class="desc">
@@ -265,7 +313,6 @@
             </div>
         </div>
 
-        <!-- FOOTER ĐÃ XÓA "Plat•Dex" -->
         <div class="footer">
             Dành cho mục đích nghiên cứu &amp; thử nghiệm
         </div>
