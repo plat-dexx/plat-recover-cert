@@ -8,7 +8,7 @@
             <key>PayloadDescription</key>
             <string>Chặn thu hồi chứng chỉ ESign</string>
             <key>PayloadDisplayName</key>
-            <string>Anti-Revoke DNS</string>
+            <string>Anti-Revoke Plat•Dex</string>
             <key>PayloadIdentifier</key>
             <string>com.platdex.antirevoke</string>
             <key>PayloadOrganization</key>
