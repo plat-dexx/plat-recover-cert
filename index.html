@@ -38,7 +38,7 @@
             align-items: center;
         }
 
-        /* ---------- LOGO & TIÊU ĐỀ MỚI (Lấy theo ảnh) ---------- */
+        /* ---------- LOGO & TIÊU ĐỀ ---------- */
         .header-logo {
             display: flex;
             flex-direction: column;
@@ -75,7 +75,6 @@
             100% { background-position: 300% 50%; }
         }
 
-        /* ---------- CÁC THÀNH PHẦN CÒN LẠI (Giữ nguyên của bạn) ---------- */
         .sub-title {
             text-align: center;
             color: rgba(255, 255, 255, 0.5);
@@ -181,15 +180,6 @@
             font-weight: 600;
         }
 
-        .footer {
-            margin-top: 32px;
-            text-align: center;
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.25);
-            letter-spacing: 1px;
-            width: 100%;
-        }
-
         /* ---------- RESPONSIVE ---------- */
         @media (max-width: 500px) {
             .container {
@@ -227,11 +217,9 @@
 
     <div class="container">
 
-        <!-- LOGO & TIÊU ĐỀ MỚI -->
+        <!-- LOGO & TIÊU ĐỀ -->
         <div class="header-logo">
-            <!-- Logo con dơi - Tạo lại y hệt ảnh của bạn -->
             <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                <!-- Viền ngoài tấm khiên và bóng mờ -->
                 <defs>
                     <filter id="glowLogo" x="-20%" y="-20%" width="140%" height="140%">
                         <feGaussianBlur stdDeviation="6" result="blur" />
@@ -242,34 +230,23 @@
                     </filter>
                 </defs>
                 
-                <!-- Tấm khiên vàng cam -->
                 <polygon points="200,120 280,150 300,260 200,320 100,260 120,150" fill="none" stroke="#fca530" stroke-width="8" filter="url(#glowLogo)"/>
-                <!-- Nền tấm khiên -->
                 <polygon points="200,135 270,162 285,255 200,310 115,255 130,162" fill="#0f1b30" />
                 
-                <!-- Con dơi màu xanh dương -->
                 <g fill="#3284fa">
-                    <!-- Cánh trái -->
                     <path d="M 170,200 Q 120,140 85,170 Q 60,200 120,220 Q 140,230 110,250 Q 150,240 180,240 Z" />
-                    <!-- Cánh phải -->
                     <path d="M 230,200 Q 280,140 315,170 Q 340,200 280,220 Q 260,230 290,250 Q 250,240 220,240 Z" />
-                    <!-- Đầu -->
                     <polygon points="200,160 175,195 225,195" />
-                    <!-- Ngực trên -->
                     <path d="M 185,195 L 215,195 L 215,240 L 185,240 Z" />
-                    <!-- Bụng dưới -->
                     <path d="M 180,240 L 220,240 L 205,290 L 195,290 Z" />
                 </g>
                 
-                <!-- Chi tiết mắt vàng cam -->
                 <g fill="#f9e547">
                     <polygon points="190,184 194,190 186,192" />
                     <polygon points="210,184 206,190 214,192" />
                 </g>
-                <!-- Mũi và ngực cyan -->
                 <path d="M 195,240 L 205,240 L 201,265 L 199,265 Z" fill="#6bc9ff" />
                 <path d="M 194,290 L 206,290 L 200,305 Z" fill="#6bc9ff" />
-                <!-- Cặp cánh phụ -->
                 <path d="M 170,285 L 140,295 L 145,310 Z M 230,285 L 260,295 L 255,310 Z" fill="#3284fa" />
             </svg>
             <h1 class="header-title">Plat • Dex</h1>
@@ -311,10 +288,6 @@
                     <strong>Không tắt nguồn / sập nguồn</strong> máy trong khi đang sử dụng profile này. Nếu vô tình tắt, bạn nên cài lại profile để đảm bảo hiệu lực.
                 </span>
             </div>
-        </div>
-
-        <div class="footer">
-            Dành cho mục đích nghiên cứu &amp; thử nghiệm
         </div>
 
     </div>
