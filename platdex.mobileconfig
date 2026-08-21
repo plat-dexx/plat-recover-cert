@@ -10,9 +10,9 @@
             <key>PayloadDisplayName</key>
             <string>Anti-Revoke DNS</string>
             <key>PayloadIdentifier</key>
-            <string>com.yourname.antirevoke</string>
+            <string>com.platdex.antirevoke</string>
             <key>PayloadOrganization</key>
-            <string>Your Organization</string>
+            <string>Plat•Dex</string>
             <key>PayloadType</key>
             <string>com.apple.dnsSettings.managed</string>
             <key>PayloadUUID</key>
@@ -41,7 +41,7 @@
     <key>PayloadDisplayName</key>
     <string>DNS Chặn Thu Hồi</string>
     <key>PayloadIdentifier</key>
-    <string>com.yourname.dns</string>
+    <string>com.platdex.dns</string>
     <key>PayloadUUID</key>
     <string>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</string>
     <key>PayloadType</key>
