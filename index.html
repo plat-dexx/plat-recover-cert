@@ -43,7 +43,6 @@
             letter-spacing: -0.02em;
             line-height: 1.1;
             margin-bottom: 8px;
-            /* Tạo hiệu ứng 3D bằng nhiều text-shadow */
             text-shadow:
                 0 1px 0 #c0c0c0,
                 0 2px 0 #b0b0b0,
@@ -55,14 +54,12 @@
                 0 8px 0 #505050,
                 0 9px 0 #404040,
                 0 10px 8px rgba(0, 0, 0, 0.6);
-            /* Nền gradient cho chữ */
             background: linear-gradient(90deg,
                     #ff0000, #ff7700, #ffff00, #00ff00, #0000ff, #8b00ff, #ff0000);
             background-size: 300% 100%;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            /* Animation chạy màu cầu vồng */
             animation: rainbowMove 5s linear infinite;
             transform: perspective(600px) rotateX(6deg) rotateY(-2deg);
             display: inline-block;
@@ -74,7 +71,6 @@
             100% { background-position: 300% 50%; }
         }
 
-        /* Phụ đề nhỏ dưới chữ chính */
         .sub-title {
             text-align: center;
             color: rgba(255, 255, 255, 0.5);
@@ -88,7 +84,6 @@
             padding-bottom: 18px;
         }
 
-        /* ---------- MÔ TẢ ---------- */
         .desc {
             color: rgba(255, 255, 255, 0.85);
             font-size: 1.05rem;
@@ -102,7 +97,6 @@
             font-weight: 600;
         }
 
-        /* ---------- NÚT CÀI ĐẶT ---------- */
         .install-btn-wrapper {
             text-align: center;
             margin: 30px 0 24px;
@@ -134,7 +128,6 @@
             font-style: normal;
         }
 
-        /* ---------- LƯU Ý SỬ DỤNG (Cards) ---------- */
         .notes {
             margin-top: 36px;
             background: rgba(0, 0, 0, 0.25);
@@ -179,11 +172,7 @@
             color: #fff;
             font-weight: 600;
         }
-        .note-text .highlight {
-            color: #ffd966;
-        }
 
-        /* ---------- FOOTER ---------- */
         .footer {
             margin-top: 32px;
             text-align: center;
@@ -199,7 +188,6 @@
             color: rgba(255, 255, 255, 0.6);
         }
 
-        /* ---------- RESPONSIVE ---------- */
         @media (max-width: 500px) {
             .container {
                 padding: 28px 18px;
@@ -239,25 +227,20 @@
 
     <div class="container">
 
-        <!-- ====== TIÊU ĐỀ CHÍNH ====== -->
         <h1 class="rainbow-3d">Plat • Dex</h1>
         <div class="sub-title">DNS Chặn Thu Hồi Chứng Chỉ</div>
 
-        <!-- ====== MÔ TẢ ====== -->
         <p class="desc">
             <strong>Cài đặt hồ sơ DNS</strong> để ngăn chặn việc Apple thu hồi chứng chỉ
-            trên thiết bị của bạn. Hồ sơ này sẽ chặn các máy chủ OCSP, CRL và xác thực của Apple,
-            giúp các ứng dụng ký phụ (như ESign) hoạt động ổn định.
+            trên thiết bị của bạn. Giúp các ứng dụng ký phụ (như ESign) hoạt động ổn định.
         </p>
 
-        <!-- ====== NÚT CÀI ĐẶT ====== -->
         <div class="install-btn-wrapper">
-            <a href="khoindvn.mobileconfig" class="install-btn" download="khoindvn.mobileconfig">
+            <a href="platdex.mobileconfig" class="install-btn" download="platdex.mobileconfig">
                 <i>📲</i> Cài đặt hồ sơ
             </a>
         </div>
 
-        <!-- ====== LƯU Ý SỬ DỤNG ====== -->
         <div class="notes">
             <div class="notes-title">⚠️ Lưu ý quan trọng</div>
 
@@ -281,23 +264,8 @@
                     <strong>Không tắt nguồn / sập nguồn</strong> máy trong khi đang sử dụng profile này. Nếu vô tình tắt, bạn nên cài lại profile để đảm bảo hiệu lực.
                 </span>
             </div>
-
-            <div class="note-item">
-                <span class="note-icon">🔄</span>
-                <span class="note-text">
-                    <strong>Cập nhật danh sách domain</strong> khi Apple thay đổi máy chủ. Theo dõi cộng đồng để có file mới nhất.
-                </span>
-            </div>
-
-            <div class="note-item">
-                <span class="note-icon">🔒</span>
-                <span class="note-text">
-                    <span class="highlight">Tự chịu trách nhiệm</span> – việc chặn các máy chủ xác thực có thể ảnh hưởng đến một số chức năng bảo mật của iOS (xác minh ứng dụng, App Store, …). Hãy cân nhắc trước khi sử dụng.
-                </span>
-            </div>
         </div>
 
-        <!-- ====== FOOTER ====== -->
         <div class="footer">
             <a href="#">Plat•Dex</a> &bull; Dành cho mục đích nghiên cứu &amp; thử nghiệm
         </div>
