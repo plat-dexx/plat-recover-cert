@@ -102,15 +102,19 @@
             font-weight: 600;
         }
 
-        .install-btn-wrapper {
+        /* ---------- CÁC NÚT BẤM (Cài đặt & Liên hệ) ---------- */
+        .btn-wrapper {
             text-align: center;
-            margin: 0px 0 24px;
+            margin: 0px 0 12px;
             width: 100%;
         }
+        
+        .btn-wrapper:last-of-type {
+            margin-bottom: 24px;
+        }
 
-        .install-btn {
+        .btn-main {
             display: inline-block;
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
             padding: 18px 48px;
             border-radius: 60px;
             font-size: 1.3rem;
@@ -118,24 +122,43 @@
             color: #fff;
             text-decoration: none;
             letter-spacing: 0.5px;
-            box-shadow: 0 10px 30px -8px rgba(0, 114, 255, 0.4);
             transition: all 0.25s ease;
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
-        .install-btn:hover {
+        
+        .btn-main:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 16px 40px -6px rgba(0, 114, 255, 0.6);
         }
-        .install-btn:active {
+        
+        .btn-main:active {
             transform: scale(0.96);
         }
-        .install-btn i {
+        
+        .btn-main i {
             margin-right: 12px;
             font-style: normal;
         }
 
+        /* Màu riêng cho từng nút */
+        .btn-install {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            box-shadow: 0 10px 30px -8px rgba(0, 114, 255, 0.4);
+        }
+        .btn-install:hover {
+            box-shadow: 0 16px 40px -6px rgba(0, 114, 255, 0.6);
+        }
+
+        .btn-contact {
+            background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+            box-shadow: 0 10px 30px -8px rgba(106, 130, 251, 0.4);
+        }
+        .btn-contact:hover {
+            box-shadow: 0 16px 40px -6px rgba(106, 130, 251, 0.6);
+        }
+
+        /* ---------- LƯU Ý ---------- */
         .notes {
-            margin-top: 36px;
+            margin-top: 10px;
             background: rgba(0, 0, 0, 0.25);
             border-radius: 28px;
             padding: 22px 20px 18px;
@@ -193,7 +216,7 @@
             .header-title {
                 font-size: 2rem;
             }
-            .install-btn {
+            .btn-main {
                 padding: 16px 32px;
                 font-size: 1.1rem;
                 width: 100%;
@@ -259,9 +282,17 @@
             trên thiết bị của bạn. Giúp các ứng dụng ký phụ (như ESign) hoạt động ổn định.
         </p>
 
-        <div class="install-btn-wrapper">
-            <a href="platdex.mobileconfig" class="install-btn" download="platdex.mobileconfig">
+        <!-- NÚT CÀI ĐẶT -->
+        <div class="btn-wrapper">
+            <a href="platdex.mobileconfig" class="btn-main btn-install" download="platdex.mobileconfig">
                 <i>📲</i> Cài đặt hồ sơ
+            </a>
+        </div>
+
+        <!-- NÚT LIÊN HỆ ADMIN (Mới thêm) -->
+        <div class="btn-wrapper">
+            <a href="https://t.me/plat_dex" target="_blank" class="btn-main btn-contact">
+                <i>📩</i> Liên Hệ Admin
             </a>
         </div>
 
