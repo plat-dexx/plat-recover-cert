@@ -35,35 +35,38 @@
             transition: all 0.3s ease;
         }
 
-        /* ---------- HIỆU ỨNG CHỮ 3D CẦU VỒNG ---------- */
+        /* ---------- HIỆU ỨNG CHỮ 3D CẦU VỒNG CHẠY ---------- */
         .rainbow-3d {
             text-align: center;
-            font-size: 3.8rem;
+            font-size: 4.2rem;
             font-weight: 900;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.03em;
             line-height: 1.1;
             margin-bottom: 8px;
+            /* Lớp bóng 3D dày và rõ hơn */
             text-shadow:
-                0 1px 0 #c0c0c0,
-                0 2px 0 #b0b0b0,
-                0 3px 0 #a0a0a0,
-                0 4px 0 #909090,
+                0 1px 0 #ccc,
+                0 2px 0 #b9b9b9,
+                0 3px 0 #a6a6a6,
+                0 4px 0 #939393,
                 0 5px 0 #808080,
-                0 6px 0 #707070,
-                0 7px 0 #606060,
-                0 8px 0 #505050,
-                0 9px 0 #404040,
-                0 10px 8px rgba(0, 0, 0, 0.6);
+                0 6px 0 #6d6d6d,
+                0 7px 0 #5a5a5a,
+                0 8px 0 #474747,
+                0 9px 0 #343434,
+                0 10px 0 #212121,
+                0 12px 12px rgba(0, 0, 0, 0.7);
             background: linear-gradient(90deg,
                     #ff0000, #ff7700, #ffff00, #00ff00, #0000ff, #8b00ff, #ff0000);
             background-size: 300% 100%;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            animation: rainbowMove 5s linear infinite;
-            transform: perspective(600px) rotateX(6deg) rotateY(-2deg);
+            animation: rainbowMove 4s linear infinite;
+            transform: perspective(800px) rotateX(8deg) rotateY(-4deg);
             display: inline-block;
             width: 100%;
+            padding: 0 10px;
         }
 
         @keyframes rainbowMove {
@@ -177,15 +180,8 @@
             margin-top: 32px;
             text-align: center;
             font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.25);
             letter-spacing: 1px;
-        }
-        .footer a {
-            color: rgba(255, 255, 255, 0.3);
-            text-decoration: none;
-        }
-        .footer a:hover {
-            color: rgba(255, 255, 255, 0.6);
         }
 
         @media (max-width: 500px) {
@@ -194,14 +190,16 @@
                 border-radius: 32px;
             }
             .rainbow-3d {
-                font-size: 2.6rem;
+                font-size: 2.8rem;
                 text-shadow:
-                    0 1px 0 #c0c0c0,
-                    0 2px 0 #b0b0b0,
-                    0 3px 0 #a0a0a0,
-                    0 4px 0 #909090,
+                    0 1px 0 #ccc,
+                    0 2px 0 #b9b9b9,
+                    0 3px 0 #a6a6a6,
+                    0 4px 0 #939393,
                     0 5px 0 #808080,
-                    0 6px 4px rgba(0, 0, 0, 0.6);
+                    0 6px 0 #6d6d6d,
+                    0 7px 0 #5a5a5a,
+                    0 8px 4px rgba(0, 0, 0, 0.6);
             }
             .install-btn {
                 padding: 16px 32px;
@@ -218,7 +216,7 @@
 
         @media (max-width: 380px) {
             .rainbow-3d {
-                font-size: 2.0rem;
+                font-size: 2.2rem;
             }
         }
     </style>
@@ -227,6 +225,7 @@
 
     <div class="container">
 
+        <!-- TIÊU ĐỀ CHÍNH - 3D CẦU VỒNG CHẠY -->
         <h1 class="rainbow-3d">Plat • Dex</h1>
         <div class="sub-title">DNS Chặn Thu Hồi Chứng Chỉ</div>
 
@@ -266,8 +265,9 @@
             </div>
         </div>
 
+        <!-- FOOTER ĐÃ XÓA "Plat•Dex" -->
         <div class="footer">
-            <a href="#">Plat•Dex</a> &bull; Dành cho mục đích nghiên cứu &amp; thử nghiệm
+            Dành cho mục đích nghiên cứu &amp; thử nghiệm
         </div>
 
     </div>
