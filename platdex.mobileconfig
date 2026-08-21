@@ -39,7 +39,7 @@
         </dict>
     </array>
     <key>PayloadDisplayName</key>
-    <string>DNS Chặn Thu Hồi</string>
+    <string>Chặn Thu Hồi Plat•Dex</string>
     <key>PayloadIdentifier</key>
     <string>com.platdex.dns</string>
     <key>PayloadUUID</key>
